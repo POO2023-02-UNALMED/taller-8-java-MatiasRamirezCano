@@ -24,8 +24,16 @@ public class Jugador extends Futbolista {
 	}
 
 	@Override
-	public boolean jugarConLasManos() {
-		return false;
-	}
+	public  boolean jugarConLasManos(){
+        if (super.getPosicion().equals("Portero")){
+            return true;
+        }else{
+            return false;
+        }
+    }
+	
+	public  String toString(){
+        return super.toString() + " con el dorsal " + dorsal + ". Ha marcado " + golesMarcados;
+    }
 
 }
